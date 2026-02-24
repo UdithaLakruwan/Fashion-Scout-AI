@@ -1,12 +1,15 @@
 # Fashion Scout AI 
-An end-to-end Computer Vision project that classifies fashion items using a Deep Convolutional Neural Network (CNN) built with PyTorch.
+An End-to-End Computer Vision API built using the Data Science Hierarchy of Needs.
 
-## Features
-- **Architecture**: 2-Layer CNN with Dropout for high accuracy.
-- **Data**: FashionMNIST-style data processed from CSV.
-- **Persistence**: Pre-trained weights included for instant inference.
+## Tech Stack
+* **Level 1 (Data):** FashionMNIST Dataset
+* **Level 2 (Clean):** PIL & NumPy for image normalization/inversion
+* **Level 3 (Logic):** PyTorch CNN (Convolutional Neural Network)
+* **Level 4 (DevOps):** FastAPI, Docker, and Ngrok for tunneling
+* **Level 5 (Value):** Publicly accessible API for clothing classification
 
-## Setup
-1. Clone the repo.
-2. Install dependencies: `pip install -r requirements.txt`
-3. Run inference using `model.py` and `fashion_scout_v2.pth`.
+## Run with Docker
+To run this project locally without installing Python dependencies:
+```bash
+docker build -t fashion-scout-ai .
+docker run -p 8000:8000 fashion-scout-ai
